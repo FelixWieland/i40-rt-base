@@ -11,5 +11,6 @@ var Service = kosmo.Service{
 	HTTPConfig: kosmo.HTTPConfig{
 		Playground: true,
 		Port:       ":8080",
+		APIBase:    "/api",
 	},
 }

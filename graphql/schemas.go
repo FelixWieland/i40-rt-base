@@ -56,7 +56,7 @@ type Dashboards []Dashboard
 //Dashboard GraphQL-Schema
 type Dashboard struct {
 	ID      int     `description:"Unique Dashboard" kosmo:"required"`
-	Name    int     `description:"Dashboard" kosmo:"required"`
+	Name    int     `description:"Name of the Dashboard" kosmo:"required"`
 	Widgets Widgets `description:"Widgets in the dashboard"`
 }
 
