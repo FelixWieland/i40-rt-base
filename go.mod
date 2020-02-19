@@ -1,4 +1,4 @@
-module i40rtbase
+module github.com/FelixWieland/i40-rt-base
 
 // go: no requirements found in Gopkg.lock
 
@@ -9,4 +9,5 @@ require (
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/graphql-go/graphql v0.7.9 // indirect
 	github.com/graphql-go/handler v0.2.3 // indirect
+	github.com/smartystreets/goconvey v1.6.4 // indirect
 )

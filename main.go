@@ -1,19 +1,20 @@
 package main
 
 import (
-	"i40rtbase/config"
-	. "i40rtbase/graphql"
-	"i40rtbase/server"
 	"log"
 	"net/http"
+
+	"github.com/FelixWieland/i40-rt-base/config"
+	"github.com/FelixWieland/i40-rt-base/graphql"
+	"github.com/FelixWieland/i40-rt-base/server"
 
 	"github.com/FelixWieland/kosmo"
 )
 
 func main() {
 
-	dashboardsSchema := kosmo.Type(Dashboards{}).Queries(GetDashboards)
-	dashboardSchema := kosmo.Type(Dashboard{}).Queries(GetDashboard)
+	dashboardsSchema := kosmo.Type(graphql.Dashboards{}).Queries(graphql.GetDashboards)
+	dashboardSchema := kosmo.Type(graphql.Dashboard{}).Queries(graphql.GetDashboard)
 
 	httpServer := config.Service.Schemas(dashboardsSchema, dashboardSchema).Server()
 
